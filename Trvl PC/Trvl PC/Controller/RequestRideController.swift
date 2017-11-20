@@ -12,6 +12,7 @@ import MapKit
 class RequestRideController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
+    @IBOutlet var actionButton: RoundedShadowButton!
     
 
     override func viewDidLoad() {
@@ -19,7 +20,10 @@ class RequestRideController: UIViewController, MKMapViewDelegate {
         mapView.delegate = self
     }
     
-
+    @IBAction func actionButtonPressed(_ sender: Any) {
+        actionButton.animateButton(shouldLoad: true, withMessage: "")
+    }
+    
     
 
 }
