@@ -12,6 +12,8 @@
 		A4679BAD1FC09F5700BB4989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAB1FC09F5700BB4989 /* Main.storyboard */; };
 		A4679BAF1FC09F5700BB4989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAE1FC09F5700BB4989 /* Assets.xcassets */; };
 		A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */; };
+		A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE21FC262C600B9060E /* GradientView.swift */; };
+		A4C49AE51FC266E600B9060E /* RequestRideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE41FC266E600B9060E /* RequestRideController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		A4679BAE1FC09F5700BB4989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4679BB11FC09F5700BB4989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4679BB31FC09F5700BB4989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4C49AE21FC262C600B9060E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A4C49AE41FC266E600B9060E /* RequestRideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRideController.swift; sourceTree = "<group>"; };
 		CB5C8FD94D7C982D1B173351 /* Pods-Trvl PC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trvl PC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trvl PC/Pods-Trvl PC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,7 @@
 		A4679BB91FC0A1A300BB4989 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4C49AE41FC266E600B9060E /* RequestRideController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 		A4679BBA1FC0A1AD00BB4989 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4C49AE21FC262C600B9060E /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */,
+				A4C49AE51FC266E600B9060E /* RequestRideController.swift in Sources */,
 				A4679BA81FC09F5700BB4989 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
