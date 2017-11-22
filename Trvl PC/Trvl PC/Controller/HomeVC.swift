@@ -1,5 +1,5 @@
 //
-//  RequestRideController.swift
+//  HomeVC.swift
 //  Trvl PC
 //
 //  Created by don't touch me on 11/19/17.
@@ -9,12 +9,13 @@
 import UIKit
 import MapKit
 
-class RequestRideController: UIViewController, MKMapViewDelegate {
+class HomeVC: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var actionButton: RoundedShadowButton!
     
-
+    var delegate: CenterVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -24,6 +25,7 @@ class RequestRideController: UIViewController, MKMapViewDelegate {
         actionButton.animateButton(shouldLoad: true, withMessage: "")
     }
     
-    
-
+    @IBAction func moreButtonPressed(_ sender: UIButton) {
+        delegate?.toggleLeftPanel()
+    }
 }
