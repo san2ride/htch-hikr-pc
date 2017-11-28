@@ -12,9 +12,15 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        view.bindtoKeyboard()
     }
 
-
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func screenTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }

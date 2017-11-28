@@ -17,6 +17,7 @@
 		A4679BAD1FC09F5700BB4989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAB1FC09F5700BB4989 /* Main.storyboard */; };
 		A4679BAF1FC09F5700BB4989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAE1FC09F5700BB4989 /* Assets.xcassets */; };
 		A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */; };
+		A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */; };
 		A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE21FC262C600B9060E /* GradientView.swift */; };
 		A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE41FC266E600B9060E /* HomeVC.swift */; };
 		A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEAB9E1FC295B5007FDF26 /* RoundImageView.swift */; };
@@ -39,6 +40,7 @@
 		A4679BAE1FC09F5700BB4989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4679BB11FC09F5700BB4989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4679BB31FC09F5700BB4989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		A4C49AE21FC262C600B9060E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A4C49AE41FC266E600B9060E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A4DEAB9E1FC295B5007FDF26 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
@@ -132,10 +134,11 @@
 		A4679BBA1FC0A1AD00BB4989 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */,
+				A4DEABA21FC29A84007FDF26 /* CircleView.swift */,
 				A4C49AE21FC262C600B9060E /* GradientView.swift */,
 				A4DEAB9E1FC295B5007FDF26 /* RoundImageView.swift */,
 				A4DEABA01FC2992B007FDF26 /* RoundedShadowView.swift */,
-				A4DEABA21FC29A84007FDF26 /* CircleView.swift */,
 				A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */,
 			);
 			path = View;
@@ -309,6 +312,7 @@
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
 				A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */,
 				A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */,
+				A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */,
 				A42175301FC3D64C002385A8 /* LeftSidePanelVC.swift in Sources */,
 				A4679BA81FC09F5700BB4989 /* AppDelegate.swift in Sources */,
 			);
