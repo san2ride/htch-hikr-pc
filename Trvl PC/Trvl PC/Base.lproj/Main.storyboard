@@ -273,7 +273,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-C7-dct">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-C7-dct" customClass="RoundedShadowButton" customModule="Trvl_PC" customModuleProvider="target">
                                 <rect key="frame" x="16" y="597" width="231" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6gB-pd-QPb"/>
@@ -283,7 +283,7 @@
                                     <color key="titleColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpLoginButtonPressed:" destination="vfd-xu-29w" eventType="touchUpInside" id="7lb-KG-6Lx"/>
+                                    <action selector="signUpLoginButtonPressed:" destination="vfd-xu-29w" eventType="touchUpInside" id="sQb-l7-v3y"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,8 +332,8 @@
                                                 <action selector="cancelButtonPressed:" destination="x2u-RS-KsD" eventType="touchUpInside" id="nue-H0-8U1"/>
                                             </connections>
                                         </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-Q6-wxR">
-                                            <rect key="frame" x="27" y="180" width="320" height="307"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-Q6-wxR">
+                                            <rect key="frame" x="27" y="189" width="320" height="289"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cel-zO-Vvl">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
@@ -370,7 +370,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-nC-a8c">
-                                                    <rect key="frame" x="0.0" y="145" width="320" height="41"/>
+                                                    <rect key="frame" x="0.0" y="139" width="320" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="ybN-Mp-QjH"/>
                                                     </constraints>
@@ -380,24 +380,24 @@
                                                     </segments>
                                                     <color key="tintColor" red="0.90196078430000004" green="0.20784313730000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rB9-Eh-vw7" customClass="RoundedCornerTextField" customModule="Trvl_PC" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="206" width="320" height="40"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rB9-Eh-vw7" customClass="RoundedCornerTextField" customModule="Trvl_PC" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="194" width="320" height="40"/>
                                                     <color key="tintColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="DsU-eT-Myh"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="next"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-y3-ppc" customClass="RoundedCornerTextField" customModule="Trvl_PC" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="267" width="320" height="40"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-y3-ppc" customClass="RoundedCornerTextField" customModule="Trvl_PC" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="249" width="320" height="40"/>
                                                     <color key="tintColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="acA-C0-hOt"/>
                                                     </constraints>
                                                     <color key="textColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
@@ -412,6 +412,9 @@
                                             <state key="normal" title="SIGN UP / LOGIN">
                                                 <color key="titleColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="authButtonPressed:" destination="x2u-RS-KsD" eventType="touchUpInside" id="rdh-f6-Zhc"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -443,6 +446,12 @@
                             <outletCollection property="gestureRecognizers" destination="zPc-rT-gug" appends="YES" id="sky-uK-dpC"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="authButton" destination="iAH-Zh-2m6" id="Abg-N0-rkj"/>
+                        <outlet property="emailField" destination="rB9-Eh-vw7" id="iTt-Dm-AI0"/>
+                        <outlet property="passwordField" destination="eEg-y3-ppc" id="6CK-lg-FAX"/>
+                        <outlet property="segmentedControl" destination="vt5-nC-a8c" id="dTe-NY-Bwi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGB-QC-Tbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="zPc-rT-gug">

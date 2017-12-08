@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>34020985171-0vpsahskcgdl7iqf73uu8slhtpu1t4ms.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.34020985171-0vpsahskcgdl7iqf73uu8slhtpu1t4ms</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDEEvLrCcgthFOwqdpqfHowz-c9ElLP2Qo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>34020985171</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jsanchezrides.Trvl-PC</string>
+	<key>PROJECT_ID</key>
+	<string>trvlpc-25faf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trvlpc-25faf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:34020985171:ios:fc3549f070f2469c</string>
+	<key>DATABASE_URL</key>
+	<string>https://trvlpc-25faf.firebaseio.com</string>
+</dict>
+</plist>
