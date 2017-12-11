@@ -97,6 +97,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYp-te-vbZ">
                                 <rect key="frame" x="297" y="517" width="62" height="62"/>
                                 <state key="normal" image="centerMapBtn"/>
+                                <connections>
+                                    <action selector="centerMapLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qem-D7-O00"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5e-Kj-iLB" customClass="RoundedShadowView" customModule="Trvl_PC" customModuleProvider="target">
                                 <rect key="frame" x="16" y="70" width="343" height="80"/>
