@@ -421,7 +421,8 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up or login to start requesting rides with TRVLPC:  the easiest way to get around in Park City!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glJ-SZ-jgn">
                                                             <rect key="frame" x="0.0" y="50" width="320" height="74"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="320" id="b19-fu-S8X"/>
+                                                                <constraint firstAttribute="width" constant="320" id="RAi-Be-dRp"/>
+                                                                <constraint firstAttribute="height" constant="74" id="pId-ND-7Sc"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                                             <color key="textColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -466,7 +467,7 @@
                                             <rect key="frame" x="27" y="587" width="320" height="60"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="A3i-eu-Wed"/>
+                                                <constraint firstAttribute="height" constant="60" id="7yP-ps-JiA"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
                                             <state key="normal" title="SIGN UP / LOGIN">
@@ -478,13 +479,13 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="iAH-Zh-2m6" secondAttribute="bottom" constant="20" id="0Xb-gX-6aT"/>
-                                        <constraint firstItem="iAH-Zh-2m6" firstAttribute="leading" secondItem="HaI-vL-qYR" secondAttribute="leading" constant="27.5" id="Cmm-Nh-79x"/>
                                         <constraint firstItem="BqP-Q6-wxR" firstAttribute="centerX" secondItem="HaI-vL-qYR" secondAttribute="centerX" id="Huw-XG-gRl"/>
                                         <constraint firstItem="izr-g8-H6M" firstAttribute="top" secondItem="HaI-vL-qYR" secondAttribute="top" constant="25" id="OVU-yn-v98"/>
+                                        <constraint firstItem="iAH-Zh-2m6" firstAttribute="trailing" secondItem="BqP-Q6-wxR" secondAttribute="trailing" id="RpI-BR-LRT"/>
                                         <constraint firstItem="BqP-Q6-wxR" firstAttribute="centerY" secondItem="HaI-vL-qYR" secondAttribute="centerY" id="XZl-3E-hiK"/>
                                         <constraint firstItem="izr-g8-H6M" firstAttribute="leading" secondItem="HaI-vL-qYR" secondAttribute="leading" constant="20" id="cAB-sk-uOb"/>
-                                        <constraint firstAttribute="trailing" secondItem="iAH-Zh-2m6" secondAttribute="trailing" constant="27.5" id="iRd-b7-tO2"/>
+                                        <constraint firstItem="iAH-Zh-2m6" firstAttribute="leading" secondItem="BqP-Q6-wxR" secondAttribute="leading" id="hlg-9q-TYz"/>
+                                        <constraint firstAttribute="bottom" secondItem="iAH-Zh-2m6" secondAttribute="bottom" constant="20" id="mtG-pk-mgr"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>

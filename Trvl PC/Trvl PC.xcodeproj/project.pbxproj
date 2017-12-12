@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E59D4624DD5ADDBEC9816B /* Pods_Trvl_PC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC05E092CE3AF69AA716A53 /* Pods_Trvl_PC.framework */; };
 		A42175301FC3D64C002385A8 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421752F1FC3D64C002385A8 /* LeftSidePanelVC.swift */; };
 		A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175331FC3DB35002385A8 /* ContainerVC.swift */; };
 		A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175361FC3E361002385A8 /* CenterVCDelegate.swift */; };
@@ -19,6 +18,7 @@
 		A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */; };
 		A46C92CF1FD638CF0051BE81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */; };
 		A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */; };
+		A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D90381FDF7EC200CA6F25 /* UpdateService.swift */; };
 		A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE21FC262C600B9060E /* GradientView.swift */; };
 		A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE41FC266E600B9060E /* HomeVC.swift */; };
 		A4DE74F81FDA186C00D48C7D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DE74F71FDA186C00D48C7D /* DataService.swift */; };
@@ -44,6 +44,7 @@
 		A4679BB31FC09F5700BB4989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		A49D90381FDF7EC200CA6F25 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		A4C49AE21FC262C600B9060E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A4C49AE41FC266E600B9060E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		A4DE74F71FDA186C00D48C7D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E59D4624DD5ADDBEC9816B /* Pods_Trvl_PC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A4DE74F71FDA186C00D48C7D /* DataService.swift */,
+				A49D90381FDF7EC200CA6F25 /* UpdateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -326,6 +327,7 @@
 				A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */,
 				A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */,
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
+				A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */,
 				A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */,
 				A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */,
 				A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */,
@@ -475,7 +477,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jsanchezrides.Trvl-PC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -491,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jsanchezrides.Trvl-PC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
