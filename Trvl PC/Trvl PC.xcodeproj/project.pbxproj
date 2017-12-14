@@ -26,6 +26,7 @@
 		A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEABA01FC2992B007FDF26 /* RoundedShadowView.swift */; };
 		A4DEABA31FC29A84007FDF26 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEABA21FC29A84007FDF26 /* CircleView.swift */; };
 		A4DEABA51FC29D53007FDF26 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */; };
+		A4E6EF441FDFA66F00BBF4A4 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		A4DEABA01FC2992B007FDF26 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		A4DEABA21FC29A84007FDF26 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		CB5C8FD94D7C982D1B173351 /* Pods-Trvl PC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trvl PC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trvl PC/Pods-Trvl PC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +147,7 @@
 				A4DEAB9E1FC295B5007FDF26 /* RoundImageView.swift */,
 				A4DEABA01FC2992B007FDF26 /* RoundedShadowView.swift */,
 				A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */,
+				A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */,
 				A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */,
 				A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */,
+				A4E6EF441FDFA66F00BBF4A4 /* DriverAnnotation.swift in Sources */,
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
 				A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */,
 				A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */,
