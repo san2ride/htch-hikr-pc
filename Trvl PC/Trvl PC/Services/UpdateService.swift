@@ -6,7 +6,6 @@
 //  Copyright © 2017 trvl, LLC. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MapKit
 import Firebase

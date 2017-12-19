@@ -8,6 +8,7 @@
 
 import UIKit
 import QuartzCore
+import Firebase
 
 enum SlideOutState {
     case collapsed

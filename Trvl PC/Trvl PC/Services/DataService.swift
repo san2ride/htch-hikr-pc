@@ -6,7 +6,8 @@
 //  Copyright © 2017 trvl, LLC. All rights reserved.
 //
 
-import Foundation
+
+import UIKit
 import Firebase
 
 let DB_BASE = FIRDatabase.database().reference()
