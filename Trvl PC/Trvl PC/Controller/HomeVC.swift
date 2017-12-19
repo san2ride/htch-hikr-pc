@@ -18,6 +18,7 @@ class HomeVC: UIViewController {
     @IBOutlet var actionButton: RoundedShadowButton!
     @IBOutlet var centerMapButton: UIButton!
     @IBOutlet var destinationTextField: UITextField!
+    @IBOutlet var destinationCircle: CircleView!
     
     var delegate: CenterVCDelegate?
     
@@ -174,7 +175,10 @@ extension HomeVC: UITextFieldDelegate {
             view.addSubview(tableView)
             animateTableView(shouldShow: true)
             
-            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.destinationCircle.backgroundColor = UIColor.red
+                self.destinationCircle.borderColor = UIColor.init(red: 199/255, green: 0/255, blue: 0/255, alpha: 1.0)
+            })
         }
     }
     
@@ -187,10 +191,18 @@ extension HomeVC: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        
+        if textField == destinationTextField {
+            if destinationTextField.text == "" {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.destinationCircle.backgroundColor = UIColor.lightGray
+                    self.destinationCircle.borderColor = UIColor.darkGray
+                })
+            }
+        }
     }
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        
         return true
     }
     
