@@ -10,6 +10,7 @@
 		A42175301FC3D64C002385A8 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421752F1FC3D64C002385A8 /* LeftSidePanelVC.swift */; };
 		A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175331FC3DB35002385A8 /* ContainerVC.swift */; };
 		A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175361FC3E361002385A8 /* CenterVCDelegate.swift */; };
+		A42B4D691FFDDF9200483AA3 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */; };
 		A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C11771FC5212B006BD356 /* UIViewExt.swift */; };
 		A44C117A1FC543BA006BD356 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C11791FC543BA006BD356 /* LoginVC.swift */; };
 		A4679BA81FC09F5700BB4989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4679BA71FC09F5700BB4989 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		A421752F1FC3D64C002385A8 /* LeftSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelVC.swift; sourceTree = "<group>"; };
 		A42175331FC3DB35002385A8 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		A42175361FC3E361002385A8 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
+		A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
 		A44C11771FC5212B006BD356 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		A44C11791FC543BA006BD356 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A4679BA41FC09F5700BB4989 /* Trvl PC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trvl PC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				A4DEABA01FC2992B007FDF26 /* RoundedShadowView.swift */,
 				A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */,
 				A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */,
+				A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */,
 				A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */,
 				A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */,
+				A42B4D691FFDDF9200483AA3 /* PassengerAnnotation.swift in Sources */,
 				A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */,
 				A4E6EF441FDFA66F00BBF4A4 /* DriverAnnotation.swift in Sources */,
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
