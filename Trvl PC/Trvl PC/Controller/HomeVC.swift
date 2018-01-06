@@ -12,7 +12,7 @@ import CoreLocation
 import Firebase
 import RevealingSplashView
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, Alertable {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var actionButton: RoundedShadowButton!
@@ -126,8 +126,21 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func centerMapLocationPressed(_ sender: UIButton) {
-        centerMapOnUserLocation()
-        centerMapButton.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+        DataService.instance.REF_USERS.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let userSnapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for user in userSnapshot {
+                    if user.key == self.currentUserId! {
+                        if user.hasChild("tripCoordinate") {
+                            self.zoom(toFitAnnotationsFromMapView: self.mapView)
+                            self.centerMapButton.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                        } else {
+                            self.centerMapOnUserLocation()
+                            self.centerMapButton.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                        }
+                    }
+                }
+            }
+        })
     }
     
     @IBAction func moreButtonPressed(_ sender: UIButton) {
@@ -188,6 +201,8 @@ extension HomeVC: MKMapViewDelegate {
         lineRenderer.strokeColor = UIColor(red: 13/255, green: 43/255, blue: 61/255, alpha: 0.75)
         lineRenderer.lineWidth = 3
         
+        zoom(toFitAnnotationsFromMapView: self.mapView)
+        
         return lineRenderer
     }
     
@@ -201,13 +216,14 @@ extension HomeVC: MKMapViewDelegate {
         
         search.start { (response, error) in
             if error != nil {
-                print(error.debugDescription)
+                self.showAlert("An error occurred, please try again.")
             } else if response!.mapItems.count == 0 {
-                print("No results!")
+                self.showAlert("No results! Please search again for a different location.")
             } else {
                 for mapItem in response!.mapItems {
                     self.matchingItems.append(mapItem as MKMapItem)
                     self.tableView.reloadData()
+                    self.shouldPresentLoadingView(false)
                 }
             }
         }
@@ -239,13 +255,37 @@ extension HomeVC: MKMapViewDelegate {
         
         directions.calculate { (response, error) in
             guard let response = response else {
-                print(error.debugDescription)
+                self.showAlert(error.debugDescription)
                 return
             }
             self.route = response.routes[0]
             
             self.mapView.add(self.route.polyline)
+            
+            self.shouldPresentLoadingView(false)
         }
+    }
+    
+    func zoom(toFitAnnotationsFromMapView mapView: MKMapView) {
+        if mapView.annotations.count == 0 {
+            return
+        }
+        
+        var topLeftCoordinate = CLLocationCoordinate2D(latitude: -90, longitude: 180)
+        var bottomRightCoordinate = CLLocationCoordinate2D(latitude: 90, longitude: -180)
+        
+        for annotation in mapView.annotations where !annotation.isKind(of: DriverAnnotation.self) {
+            // fmin/fmax
+            topLeftCoordinate.longitude = fmin(topLeftCoordinate.longitude, annotation.coordinate.longitude)
+            topLeftCoordinate.latitude = fmax(topLeftCoordinate.latitude, annotation.coordinate.latitude)
+            bottomRightCoordinate.longitude = fmax(bottomRightCoordinate.longitude, annotation.coordinate.longitude)
+            bottomRightCoordinate.latitude = fmin(bottomRightCoordinate.latitude, annotation.coordinate.latitude)
+        }
+        
+        var region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(topLeftCoordinate.latitude - (topLeftCoordinate.latitude - bottomRightCoordinate.latitude) * 0.5, topLeftCoordinate.longitude + (bottomRightCoordinate.longitude - topLeftCoordinate.longitude) * 0.5), span: MKCoordinateSpan(latitudeDelta: fabs(topLeftCoordinate.latitude - bottomRightCoordinate.latitude) * 2.0, longitudeDelta: fabs(bottomRightCoordinate.longitude - topLeftCoordinate.longitude) * 2.0))
+        
+        region = mapView.regionThatFits(region)
+        mapView.setRegion(region, animated: true)
     }
 }
 
@@ -275,6 +315,7 @@ extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == destinationTextField {
             performSearch()
+            shouldPresentLoadingView(true)
             view.endEditing(true)
         }
         return true
@@ -294,6 +335,16 @@ extension HomeVC: UITextFieldDelegate {
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         matchingItems = []
         tableView.reloadData()
+        
+        DataService.instance.REF_USERS.child(currentUserId!).child("tripCoordinate").removeValue()
+        mapView.removeOverlays(mapView.overlays)
+        for annotation in mapView.annotations {
+            if let annotation = annotation as? MKPointAnnotation {
+                mapView.removeAnnotation(annotation)
+            } else if annotation.isKind(of: PassengerAnnotation.self) {
+                mapView.removeAnnotation(annotation)
+            }
+        }
         
         centerMapOnUserLocation()
         return true
@@ -336,6 +387,8 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        shouldPresentLoadingView(true)
         
         let passengerCoordinate = manager?.location?.coordinate
         

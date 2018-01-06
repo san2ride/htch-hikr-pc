@@ -18,7 +18,9 @@
 		A4679BAF1FC09F5700BB4989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAE1FC09F5700BB4989 /* Assets.xcassets */; };
 		A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */; };
 		A46C92CF1FD638CF0051BE81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */; };
+		A48B75A0200051C3007E1BFB /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B759F200051C2007E1BFB /* UIViewControllerExt.swift */; };
 		A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */; };
+		A49390182001520600CBB8E7 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49390172001520600CBB8E7 /* Alertable.swift */; };
 		A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49D90381FDF7EC200CA6F25 /* UpdateService.swift */; };
 		A4C49AE31FC262C600B9060E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE21FC262C600B9060E /* GradientView.swift */; };
 		A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C49AE41FC266E600B9060E /* HomeVC.swift */; };
@@ -46,7 +48,9 @@
 		A4679BB11FC09F5700BB4989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4679BB31FC09F5700BB4989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A48B759F200051C2007E1BFB /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
+		A49390172001520600CBB8E7 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		A49D90381FDF7EC200CA6F25 /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		A4C49AE21FC262C600B9060E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A4C49AE41FC266E600B9060E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				A42175361FC3E361002385A8 /* CenterVCDelegate.swift */,
+				A49390172001520600CBB8E7 /* Alertable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				A44C11771FC5212B006BD356 /* UIViewExt.swift */,
+				A48B759F200051C2007E1BFB /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 			files = (
 				A4DEABA51FC29D53007FDF26 /* RoundedShadowButton.swift in Sources */,
 				A4DE74F81FDA186C00D48C7D /* DataService.swift in Sources */,
+				A48B75A0200051C3007E1BFB /* UIViewControllerExt.swift in Sources */,
 				A4DEABA31FC29A84007FDF26 /* CircleView.swift in Sources */,
 				A44C117A1FC543BA006BD356 /* LoginVC.swift in Sources */,
 				A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */,
@@ -334,6 +341,7 @@
 				A42B4D691FFDDF9200483AA3 /* PassengerAnnotation.swift in Sources */,
 				A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */,
 				A4E6EF441FDFA66F00BBF4A4 /* DriverAnnotation.swift in Sources */,
+				A49390182001520600CBB8E7 /* Alertable.swift in Sources */,
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
 				A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */,
 				A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */,
