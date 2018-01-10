@@ -24,6 +24,4 @@ class GradientView: UIView {
         gradient.locations = [0.8, 1.0]
         self.layer.addSublayer(gradient)
     }
-    
-
 }

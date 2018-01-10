@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227C6B0F2D431EFFFE19198F /* Pods_Trvl_PC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC05E092CE3AF69AA716A53 /* Pods_Trvl_PC.framework */; };
 		A42175301FC3D64C002385A8 /* LeftSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421752F1FC3D64C002385A8 /* LeftSidePanelVC.swift */; };
 		A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175331FC3DB35002385A8 /* ContainerVC.swift */; };
 		A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175361FC3E361002385A8 /* CenterVCDelegate.swift */; };
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				227C6B0F2D431EFFFE19198F /* Pods_Trvl_PC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,12 +280,16 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

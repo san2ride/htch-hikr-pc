@@ -10,7 +10,7 @@
 import UIKit
 import Firebase
 
-let DB_BASE = FIRDatabase.database().reference()
+let DB_BASE = Database.database().reference()
 
 class DataService {
     static let instance = DataService()
@@ -21,19 +21,19 @@ class DataService {
     private var _REF_TRIPS = DB_BASE.child("trips")
     
     // DATA Encapsulation
-    var REF_BASE: FIRDatabaseReference {
+    var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
     
-    var REF_USERS: FIRDatabaseReference {
+    var REF_USERS: DatabaseReference {
         return _REF_USERS
     }
     
-    var REF_DRIVERS: FIRDatabaseReference {
+    var REF_DRIVERS: DatabaseReference {
         return _REF_DRIVERS
     }
     
-    var REF_TRIPS: FIRDatabaseReference {
+    var REF_TRIPS: DatabaseReference {
         return _REF_TRIPS
     }
     

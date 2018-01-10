@@ -40,7 +40,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
             
             // Login current existing customer
             if let email = emailField.text, let password = passwordField.text {
-                FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                     if error == nil {
                         if let user = user {
                             if self.segmentedControl.selectedSegmentIndex == 0 {
@@ -54,19 +54,19 @@ class LoginVC: UIViewController, UITextFieldDelegate, Alertable {
                         print("Email user authenticated successfully with Firebase")
                         self.dismiss(animated: true, completion: nil)
                     } else {
-                        if let errorCode = FIRAuthErrorCode(rawValue: error!._code) {
+                        if let errorCode = AuthErrorCode(rawValue: error!._code) {
                             switch errorCode {
-                            case .errorCodeWrongPassword:
+                            case .wrongPassword:
                                 self.showAlert("Whoops! That was the wrong password!")
                             default:
                                 self.showAlert("An unexpected error occurred. Please try again.")
                             }
                         }
-                        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                        Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                             if error != nil {
-                                if let errorCode = FIRAuthErrorCode(rawValue: error!._code) {
+                                if let errorCode = AuthErrorCode(rawValue: error!._code) {
                                     switch errorCode {
-                                    case .errorCodeInvalidEmail:
+                                    case .invalidEmail:
                                         self.showAlert("That is an invalid email! Please try again.")
                                     default:
                                         self.showAlert("An unexpected error occurred. Please try again.")
