@@ -12,13 +12,13 @@
 		A42175341FC3DB35002385A8 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175331FC3DB35002385A8 /* ContainerVC.swift */; };
 		A42175371FC3E361002385A8 /* CenterVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42175361FC3E361002385A8 /* CenterVCDelegate.swift */; };
 		A42B4D691FFDDF9200483AA3 /* PassengerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */; };
+		A44B632E2006A9E5007B9BF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A44B632D2006A9E4007B9BF2 /* GoogleService-Info.plist */; };
 		A44C11781FC5212B006BD356 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C11771FC5212B006BD356 /* UIViewExt.swift */; };
 		A44C117A1FC543BA006BD356 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C11791FC543BA006BD356 /* LoginVC.swift */; };
 		A4679BA81FC09F5700BB4989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4679BA71FC09F5700BB4989 /* AppDelegate.swift */; };
 		A4679BAD1FC09F5700BB4989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAB1FC09F5700BB4989 /* Main.storyboard */; };
 		A4679BAF1FC09F5700BB4989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4679BAE1FC09F5700BB4989 /* Assets.xcassets */; };
 		A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */; };
-		A46C92CF1FD638CF0051BE81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */; };
 		A48B75A0200051C3007E1BFB /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48B759F200051C2007E1BFB /* UIViewControllerExt.swift */; };
 		A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */; };
 		A49390182001520600CBB8E7 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49390172001520600CBB8E7 /* Alertable.swift */; };
@@ -31,6 +31,8 @@
 		A4DEABA31FC29A84007FDF26 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEABA21FC29A84007FDF26 /* CircleView.swift */; };
 		A4DEABA51FC29D53007FDF26 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */; };
 		A4E6EF441FDFA66F00BBF4A4 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */; };
+		A4F64D63200740E70091CD32 /* PickupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F64D62200740E70091CD32 /* PickupVC.swift */; };
+		A4F64D65200743070091CD32 /* RoundMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F64D64200743070091CD32 /* RoundMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		A42175331FC3DB35002385A8 /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		A42175361FC3E361002385A8 /* CenterVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterVCDelegate.swift; sourceTree = "<group>"; };
 		A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerAnnotation.swift; sourceTree = "<group>"; };
+		A44B632D2006A9E4007B9BF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A44C11771FC5212B006BD356 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		A44C11791FC543BA006BD356 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		A4679BA41FC09F5700BB4989 /* Trvl PC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trvl PC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +51,6 @@
 		A4679BAE1FC09F5700BB4989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4679BB11FC09F5700BB4989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4679BB31FC09F5700BB4989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A48B759F200051C2007E1BFB /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		A4900F921FC7F4F4004B7F52 /* RoundedCornerTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextField.swift; sourceTree = "<group>"; };
 		A49390172001520600CBB8E7 /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		A4DEABA21FC29A84007FDF26 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
+		A4F64D62200740E70091CD32 /* PickupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupVC.swift; sourceTree = "<group>"; };
+		A4F64D64200743070091CD32 /* RoundMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMapView.swift; sourceTree = "<group>"; };
 		CB5C8FD94D7C982D1B173351 /* Pods-Trvl PC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trvl PC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trvl PC/Pods-Trvl PC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				A421752F1FC3D64C002385A8 /* LeftSidePanelVC.swift */,
 				A42175331FC3DB35002385A8 /* ContainerVC.swift */,
 				A44C11791FC543BA006BD356 /* LoginVC.swift */,
+				A4F64D62200740E70091CD32 /* PickupVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				A4DEABA41FC29D53007FDF26 /* RoundedShadowButton.swift */,
 				A4E6EF431FDFA66F00BBF4A4 /* DriverAnnotation.swift */,
 				A42B4D681FFDDF9200483AA3 /* PassengerAnnotation.swift */,
+				A4F64D64200743070091CD32 /* RoundMapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,7 +182,7 @@
 				A4679BAE1FC09F5700BB4989 /* Assets.xcassets */,
 				A4679BB01FC09F5700BB4989 /* LaunchScreen.storyboard */,
 				A4679BB31FC09F5700BB4989 /* Info.plist */,
-				A46C92CE1FD638CE0051BE81 /* GoogleService-Info.plist */,
+				A44B632D2006A9E4007B9BF2 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting FIles";
 			sourceTree = "<group>";
@@ -260,10 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A44B632E2006A9E5007B9BF2 /* GoogleService-Info.plist in Resources */,
 				A4679BB21FC09F5700BB4989 /* LaunchScreen.storyboard in Resources */,
 				A4679BAF1FC09F5700BB4989 /* Assets.xcassets in Resources */,
 				A4679BAD1FC09F5700BB4989 /* Main.storyboard in Resources */,
-				A46C92CF1FD638CF0051BE81 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +356,8 @@
 				A49390182001520600CBB8E7 /* Alertable.swift in Sources */,
 				A4DEAB9F1FC295B5007FDF26 /* RoundImageView.swift in Sources */,
 				A49D90391FDF7EC200CA6F25 /* UpdateService.swift in Sources */,
+				A4F64D63200740E70091CD32 /* PickupVC.swift in Sources */,
+				A4F64D65200743070091CD32 /* RoundMapView.swift in Sources */,
 				A4DEABA11FC2992B007FDF26 /* RoundedShadowView.swift in Sources */,
 				A4C49AE51FC266E600B9060E /* HomeVC.swift in Sources */,
 				A4900F931FC7F4F4004B7F52 /* RoundedCornerTextField.swift in Sources */,

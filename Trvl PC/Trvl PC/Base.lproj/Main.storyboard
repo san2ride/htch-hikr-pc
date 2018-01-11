@@ -385,12 +385,12 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izr-g8-H6M">
-                                            <rect key="frame" x="20" y="25" width="30" height="30"/>
+                                            <rect key="frame" x="20" y="20" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="0uU-M4-WVO"/>
                                                 <constraint firstAttribute="width" constant="30" id="Trv-2c-1eU"/>
                                             </constraints>
-                                            <state key="normal" image="cancelBtn"/>
+                                            <state key="normal" image="cancel"/>
                                             <connections>
                                                 <action selector="cancelButtonPressed:" destination="x2u-RS-KsD" eventType="touchUpInside" id="nue-H0-8U1"/>
                                             </connections>
@@ -483,7 +483,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="BqP-Q6-wxR" firstAttribute="centerX" secondItem="HaI-vL-qYR" secondAttribute="centerX" id="Huw-XG-gRl"/>
-                                        <constraint firstItem="izr-g8-H6M" firstAttribute="top" secondItem="HaI-vL-qYR" secondAttribute="top" constant="25" id="OVU-yn-v98"/>
+                                        <constraint firstItem="izr-g8-H6M" firstAttribute="top" secondItem="HaI-vL-qYR" secondAttribute="top" constant="20" id="JnO-jy-Mcf"/>
                                         <constraint firstItem="iAH-Zh-2m6" firstAttribute="trailing" secondItem="BqP-Q6-wxR" secondAttribute="trailing" id="RpI-BR-LRT"/>
                                         <constraint firstItem="BqP-Q6-wxR" firstAttribute="centerY" secondItem="HaI-vL-qYR" secondAttribute="centerY" id="XZl-3E-hiK"/>
                                         <constraint firstItem="izr-g8-H6M" firstAttribute="leading" secondItem="HaI-vL-qYR" secondAttribute="leading" constant="20" id="cAB-sk-uOb"/>
@@ -526,9 +526,97 @@
             </objects>
             <point key="canvasLocation" x="1717.5999999999999" y="59.820089955022496"/>
         </scene>
+        <!--PickupVC-->
+        <scene sceneID="R9e-zC-dHD">
+            <objects>
+                <viewController storyboardIdentifier="PickupVC" id="ejh-kc-R5N" customClass="PickupVC" customModule="Trvl_PC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EHO-xo-gGf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fr-le-rLB">
+                                <rect key="frame" x="20" y="30" width="30" height="31"/>
+                                <state key="normal" image="cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="ejh-kc-R5N" eventType="touchUpInside" id="IHu-qt-fYZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-PW-39z" customClass="RoundedShadowButton" customModule="Trvl_PC" customModuleProvider="target">
+                                <rect key="frame" x="16" y="587" width="343" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Y2J-aS-XFg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="ACCEPT TRIP">
+                                    <color key="titleColor" red="1" green="0.12291705610000001" blue="0.1773723613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="acceptButtonPressed:" destination="ejh-kc-R5N" eventType="touchUpInside" id="q2h-nS-HkY"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBv-Km-Z8X">
+                                <rect key="frame" x="120" y="22" width="136" height="46.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="TRVL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsT-q4-MGa">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="34"/>
+                                        <color key="textColor" red="0.90196078430000004" green="0.20784313730000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLK-Re-GiI">
+                                        <rect key="frame" x="89" y="0.0" width="47" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="34"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Would you like to pick up this passenger?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTZ-7D-mcx">
+                                <rect key="frame" x="16" y="544" width="343" height="23"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c5Z-FK-kFm" customClass="RoundMapView" customModule="Trvl_PC" customModuleProvider="target">
+                                <rect key="frame" x="26" y="171" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="ga7-ia-DJW"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.16862745100000001" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c5Z-FK-kFm" firstAttribute="leading" secondItem="VF8-sR-Kmp" secondAttribute="leading" constant="26" id="1V1-pK-e5u"/>
+                            <constraint firstItem="EsT-q4-MGa" firstAttribute="leading" secondItem="1fr-le-rLB" secondAttribute="trailing" constant="70" id="2fA-iB-Nvp"/>
+                            <constraint firstItem="1fr-le-rLB" firstAttribute="leading" secondItem="VF8-sR-Kmp" secondAttribute="leading" constant="20" id="715-Tf-ddE"/>
+                            <constraint firstItem="Ifq-PW-39z" firstAttribute="top" secondItem="cTZ-7D-mcx" secondAttribute="bottom" constant="20" id="Cab-KJ-8mZ"/>
+                            <constraint firstItem="1fr-le-rLB" firstAttribute="top" secondItem="VF8-sR-Kmp" secondAttribute="top" constant="10" id="KSg-Ha-Pdi"/>
+                            <constraint firstItem="c5Z-FK-kFm" firstAttribute="centerX" secondItem="sBv-Km-Z8X" secondAttribute="centerX" id="Lcy-BK-ljD"/>
+                            <constraint firstItem="cTZ-7D-mcx" firstAttribute="leading" secondItem="VF8-sR-Kmp" secondAttribute="leading" constant="16" id="Mgh-AK-wFq"/>
+                            <constraint firstItem="cTZ-7D-mcx" firstAttribute="top" secondItem="c5Z-FK-kFm" secondAttribute="bottom" constant="48" id="MoH-qT-KoQ"/>
+                            <constraint firstItem="sBv-Km-Z8X" firstAttribute="top" secondItem="VF8-sR-Kmp" secondAttribute="top" constant="2" id="Qft-XU-CNf"/>
+                            <constraint firstItem="Ifq-PW-39z" firstAttribute="leading" secondItem="VF8-sR-Kmp" secondAttribute="leading" constant="16" id="RYH-GK-DqL"/>
+                            <constraint firstItem="c5Z-FK-kFm" firstAttribute="centerY" secondItem="EHO-xo-gGf" secondAttribute="centerY" id="SX6-EZ-sar"/>
+                            <constraint firstItem="VF8-sR-Kmp" firstAttribute="trailing" secondItem="cTZ-7D-mcx" secondAttribute="trailing" constant="16" id="US1-7h-EeL"/>
+                            <constraint firstItem="VF8-sR-Kmp" firstAttribute="trailing" secondItem="Ifq-PW-39z" secondAttribute="trailing" constant="16" id="VS4-eY-DL5"/>
+                            <constraint firstItem="VF8-sR-Kmp" firstAttribute="bottom" secondItem="Ifq-PW-39z" secondAttribute="bottom" constant="20" id="kEt-rv-WpI"/>
+                            <constraint firstItem="VF8-sR-Kmp" firstAttribute="trailing" secondItem="1fr-le-rLB" secondAttribute="trailing" constant="325" id="ld2-a0-2bw"/>
+                            <constraint firstItem="sBv-Km-Z8X" firstAttribute="centerX" secondItem="VF8-sR-Kmp" secondAttribute="centerX" id="sH7-A4-Lz8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VF8-sR-Kmp"/>
+                    </view>
+                    <connections>
+                        <outlet property="pickupMapView" destination="c5Z-FK-kFm" id="IhH-RW-cqX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4e-Ec-pRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525.5999999999999" y="59.820089955022496"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="cancelBtn" width="32" height="31"/>
+        <image name="cancel" width="31" height="31"/>
         <image name="centerMapBtn" width="62" height="62"/>
         <image name="moreMenu" width="24" height="24"/>
         <image name="pexels-photo-24821" width="2992" height="2000"/>
