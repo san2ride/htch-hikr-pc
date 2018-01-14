@@ -11,6 +11,10 @@ import UIKit
 class RoundedShadowButton: UIButton {
     
     var originalSize: CGRect?
+    
+    override func awakeFromNib() {
+        setupView()
+    }
 
     func setupView() {
         originalSize = self.frame
@@ -19,10 +23,6 @@ class RoundedShadowButton: UIButton {
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize.zero
-    }
-    
-    override func awakeFromNib() {
-        setupView()
     }
     
     func animateButton(shouldLoad: Bool, withMessage message: String) {

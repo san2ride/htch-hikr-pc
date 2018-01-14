@@ -12,14 +12,16 @@ class RoundedCornerTextField: UITextField {
 
     var textRectOffSet: CGFloat = 3.5
     
+    override func awakeFromNib() {
+        setupView()
+    }
+    
     func setupView() {
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
     }
     
-    override func awakeFromNib() {
-        setupView()
-    }
+    
     
 //    override func textRect(forBounds bounds: CGRect) -> CGRect {
 //        return CGRect(x: 16.5 + textRectOffSet, y: 0 + (textRectOffSet / 2), width: self.frame.width - textRectOffSet, height: self.frame.height + textRectOffSet)
