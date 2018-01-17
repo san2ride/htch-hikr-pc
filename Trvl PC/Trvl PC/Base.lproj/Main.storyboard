@@ -95,7 +95,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYp-te-vbZ">
-                                <rect key="frame" x="297" y="517" width="62" height="62"/>
+                                <rect key="frame" x="297" y="509" width="62" height="62"/>
                                 <state key="normal" image="centerMapBtn"/>
                                 <connections>
                                     <action selector="centerMapLocationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qem-D7-O00"/>
@@ -179,10 +179,24 @@
                                     <constraint firstItem="QtW-n1-zEE" firstAttribute="top" secondItem="H5e-Kj-iLB" secondAttribute="top" constant="10" id="Vsi-T3-kJB"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZ6-z2-fhO">
+                                <rect key="frame" x="130" y="525" width="114" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NDa-qQ-1uo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="CANCEL TRIP">
+                                    <color key="titleColor" red="1" green="0.12291705610000001" blue="0.1773723613" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZrV-wR-87U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Kar-mL-eOh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="587" id="1fN-hY-RB8"/>
+                            <constraint firstItem="Kar-mL-eOh" firstAttribute="top" secondItem="uYp-te-vbZ" secondAttribute="bottom" constant="16" id="1kR-XC-7Uk"/>
                             <constraint firstAttribute="trailing" secondItem="FVs-3H-hz9" secondAttribute="trailing" id="3Bp-QI-af5"/>
                             <constraint firstItem="Kar-mL-eOh" firstAttribute="bottom" secondItem="FVs-3H-hz9" secondAttribute="bottom" id="7SJ-ny-j0O"/>
                             <constraint firstItem="H5e-Kj-iLB" firstAttribute="top" secondItem="2Mj-Og-vk1" secondAttribute="bottom" constant="8" id="8TQ-vl-ZRX"/>
@@ -192,14 +206,16 @@
                             <constraint firstItem="2Mj-Og-vk1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="E37-eb-OzP"/>
                             <constraint firstItem="FVs-3H-hz9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EMc-Gj-XoD"/>
                             <constraint firstAttribute="bottom" secondItem="H5e-Kj-iLB" secondAttribute="bottom" constant="517" id="NUk-oO-h7L"/>
+                            <constraint firstItem="AZ6-z2-fhO" firstAttribute="centerY" secondItem="uYp-te-vbZ" secondAttribute="centerY" id="Ock-zt-Tse"/>
                             <constraint firstItem="FVs-3H-hz9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PJp-gl-RDe"/>
                             <constraint firstItem="Gtq-xw-5vK" firstAttribute="trailing" secondItem="FVs-3H-hz9" secondAttribute="trailing" id="PUB-se-R4w"/>
                             <constraint firstItem="Kar-mL-eOh" firstAttribute="trailing" secondItem="FVs-3H-hz9" secondAttribute="trailing" id="VB2-9I-7Qc"/>
+                            <constraint firstItem="uYp-te-vbZ" firstAttribute="trailing" secondItem="H5e-Kj-iLB" secondAttribute="trailing" id="Xf1-4e-oCI"/>
+                            <constraint firstItem="AZ6-z2-fhO" firstAttribute="centerX" secondItem="Kar-mL-eOh" secondAttribute="centerX" id="bcC-o8-PXY"/>
                             <constraint firstItem="Kar-mL-eOh" firstAttribute="leading" secondItem="Gtq-xw-5vK" secondAttribute="leading" id="byk-3E-4G6"/>
+                            <constraint firstItem="AZ6-z2-fhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="h43-ye-mzP"/>
                             <constraint firstItem="Gtq-xw-5vK" firstAttribute="centerX" secondItem="2Mj-Og-vk1" secondAttribute="centerX" id="iKs-1f-NfE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uYp-te-vbZ" secondAttribute="trailing" constant="16" id="ieC-Iv-01L"/>
                             <constraint firstItem="2Mj-Og-vk1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lie-D3-eYg"/>
-                            <constraint firstItem="Kar-mL-eOh" firstAttribute="top" secondItem="uYp-te-vbZ" secondAttribute="bottom" constant="8" id="lsR-Z8-3HR"/>
                             <constraint firstItem="Gtq-xw-5vK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mB1-P4-hgf"/>
                             <constraint firstAttribute="bottom" secondItem="Gtq-xw-5vK" secondAttribute="bottom" constant="537" id="mFN-wX-REd"/>
                             <constraint firstItem="2Mj-Og-vk1" firstAttribute="leading" secondItem="H5e-Kj-iLB" secondAttribute="leading" id="mK5-bg-HBq"/>
@@ -209,6 +225,7 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="vu2-fV-ukr" id="Pqs-27-tfT"/>
+                        <outlet property="cancelButton" destination="AZ6-z2-fhO" id="g8T-Aa-AbF"/>
                         <outlet property="centerMapButton" destination="uYp-te-vbZ" id="Gb3-73-Zcy"/>
                         <outlet property="destinationCircle" destination="Sof-Tm-PO4" id="cLj-1m-TwJ"/>
                         <outlet property="destinationTextField" destination="4Jh-zQ-XqK" id="5pX-G3-I3U"/>
@@ -217,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="210" y="47"/>
+            <point key="canvasLocation" x="208.80000000000001" y="46.326836581709152"/>
         </scene>
         <!--Left Side PanelVC-->
         <scene sceneID="Cv7-6G-EuJ">
