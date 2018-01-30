@@ -63,7 +63,6 @@ class PickupVC: UIViewController {
 
 extension PickupVC: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         let identifier = "pickupPoint"
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
         if annotationView == nil {
