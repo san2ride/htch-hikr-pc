@@ -12,6 +12,12 @@ import CoreLocation
 import Firebase
 import RevealingSplashView
 
+enum AnnotationType {
+    case pickup
+    case destination
+    case driver
+}
+
 class HomeVC: UIViewController, Alertable {
     
     @IBOutlet var mapView: MKMapView!
@@ -123,25 +129,28 @@ class HomeVC: UIViewController, Alertable {
             })
         })
         
-        DataService.instance.driverIsOnTrip(driverKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
-            if isOnTrip == true {
-                DataService.instance.REF_TRIPS.observeSingleEvent(of: .value, with: { (tripSnapshot) in
-                    if let tripSnapshot = tripSnapshot.children.allObjects as? [DataSnapshot] {
-                        for trip in tripSnapshot {
-                            if trip.childSnapshot(forPath: "driverKey").value as? String == self.currentUserId! {
-                                let pickupCoordinateArray = trip.childSnapshot(forPath: "pickupCoordinate").value as! NSArray
-                                let pickupCoordinate = CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees)
-                                let pickupPlacemark = MKPlacemark(coordinate: pickupCoordinate)
-                                
-                                self.dropPinFor(placemark: pickupPlacemark)
-                                self.searchMapKitForResultsWithPolyline(forOriginMapItem: nil, withDestinationMapItem: MKMapItem(placemark: pickupPlacemark))
+        if currentUserId != nil {
+            DataService.instance.driverIsOnTrip(driverKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
+                if isOnTrip == true {
+                    DataService.instance.REF_TRIPS.observeSingleEvent(of: .value, with: { (tripSnapshot) in
+                        if let tripSnapshot = tripSnapshot.children.allObjects as? [DataSnapshot] {
+                            for trip in tripSnapshot {
+                                if trip.childSnapshot(forPath: "driverKey").value as? String == self.currentUserId! {
+                                    let pickupCoordinateArray = trip.childSnapshot(forPath: "pickupCoordinate").value as! NSArray
+                                    let pickupCoordinate = CLLocationCoordinate2D(latitude: pickupCoordinateArray[0] as! CLLocationDegrees, longitude: pickupCoordinateArray[1] as! CLLocationDegrees)
+                                    let pickupPlacemark = MKPlacemark(coordinate: pickupCoordinate)
+                                    
+                                    self.dropPinFor(placemark: pickupPlacemark)
+                                    self.searchMapKitForResultsWithPolyline(forOriginMapItem: nil, withDestinationMapItem: MKMapItem(placemark: pickupPlacemark))
+                                    self.setCustomRegion(forAnnotaionType: .pickup, withCoordinate: pickupCoordinate)
+                                }
                             }
                         }
-                    }
-                })
-            }
-        })
-        connectUserAndDriverForTrip()
+                    })
+                }
+            })
+            connectUserAndDriverForTrip()
+        }
     }
     
     func checkLocationAuthStatus() {
@@ -293,6 +302,34 @@ extension HomeVC: CLLocationManagerDelegate {
             mapView.userTrackingMode = .follow
         }
     }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        DataService.instance.driverIsOnTrip(driverKey: currentUserId!, handler: { (isOnTrip, driverKey, passengerKey) in
+            if isOnTrip == true {
+                if region.identifier == "pickup" {
+                    self.actionButton.setTitle("START TRIP", for: .normal)
+                } else if region.identifier == "destination" {
+                    self.cancelButton.fadeTo(alphaValue: 0.0, withDuration: 0.2)
+                    self.cancelButton.isHidden = true
+                    self.actionButton.setTitle("END TRIP", for: .normal)
+                }
+            }
+        })
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        DataService.instance.driverIsOnTrip(driverKey: currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
+            if isOnTrip == true {
+                if region.identifier == "pickup" {
+                    // call an action on the button that will load directions to passenger pickup
+                    self.actionButton.setTitle("GET DIRECTIONS", for: .normal)
+                } else if region.identifier == "destinations" {
+                    // call an action on the button that will load directions to destination
+                    self.actionButton.setTitle("GET DIRECTIONS", for: .normal)
+                }
+            }
+        })
+    }
 }
 
 extension HomeVC: MKMapViewDelegate {
@@ -300,6 +337,7 @@ extension HomeVC: MKMapViewDelegate {
         UpdateService.instance.updateUserLocation(withCoordinate: userLocation.coordinate)
         UpdateService.instance.updateDriverLocation(withCoordinate: userLocation.coordinate)
         
+        //Error**
         DataService.instance.userIsDriver(userKey: currentUserId!) { (isDriver) in
             if isDriver == true {
                 DataService.instance.driverIsOnTrip(driverKey: self.currentUserId!, handler: { (isOnTrip, driverKey, tripKey) in
@@ -499,6 +537,16 @@ extension HomeVC: MKMapViewDelegate {
             if overlay is MKPolyline {
                 mapView.remove(overlay)
             }
+        }
+    }
+    
+    func setCustomRegion(forAnnotaionType type: AnnotationType, withCoordinate coordinate: CLLocationCoordinate2D) {
+        if type == .pickup {
+            let pickupRegion = CLCircularRegion(center: coordinate, radius: 100, identifier: "pickup")
+            manager?.startMonitoring(for: pickupRegion)
+        } else if type == .destination {
+            let destinationRegion = CLCircularRegion(center: coordinate, radius: 100, identifier: "destination")
+            manager?.startMonitoring(for: destinationRegion)
         }
     }
 }
